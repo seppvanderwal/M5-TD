@@ -5,15 +5,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-
-
 public class turretplace : MonoBehaviour
 {
     public GameObject tower;
     public bool nodeOccupied;
     public GameObject upgrade;
-    // Start is called before the first frame update
+    
     void Start()
     {
         nodeOccupied = false;
@@ -28,17 +25,12 @@ public class turretplace : MonoBehaviour
             
         }  else
         {
-            upgrade.SetActive(true);
+            //upgrade.SetActive(true);
         }
     }
     private void placeTower()
     {
         Instantiate(tower,new Vector3(transform.position.x, 0.75f, transform.position.z), transform.rotation);
         nodeOccupied = true;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
