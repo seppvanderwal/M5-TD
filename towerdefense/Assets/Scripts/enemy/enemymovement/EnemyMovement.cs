@@ -6,7 +6,6 @@ public class EnemyMovement : MonoBehaviour
 {
    
     public float speed = 10;
-
     private Transform target;
     private int waveintIndex = 0;
 

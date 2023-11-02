@@ -8,7 +8,7 @@ public class turretshoot : MonoBehaviour
     public GameObject bullet;
     private findenemy Findenemy;
     public GameObject bulletpoint;
-    public float bulletSpeed = 50f; // Adjust the bullet speed as needed
+    public float bulletSpeed = 50f; 
     private float cooldown = 0;
 
     void Start()
@@ -35,11 +35,8 @@ public class turretshoot : MonoBehaviour
         Rigidbody bulletRigidbody = newBullet.GetComponent<Rigidbody>();
         if (bulletRigidbody)
         {
-            // Calculate the direction to the target
             Vector3 direction = Findenemy.target.transform.position - bulletpoint.transform.position;
             direction.Normalize();
-
-            // Apply force to the bullet to move it towards the target
             bulletRigidbody.velocity = direction * bulletSpeed;
         }
     }

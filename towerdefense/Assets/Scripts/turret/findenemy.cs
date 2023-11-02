@@ -10,19 +10,16 @@ public class findenemy : MonoBehaviour
     public float range = 15f;
     public string enemytag = "Enemy";
     public float speed = 10;
-    // Start is called before the first frame update
+    
     void Start()
     {
         InvokeRepeating("UpdateEnemy", 0f, 0.5f);
     }
-
-    // Update is called once per frame
      void UpdateEnemy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemytag);
         float mindistance = Mathf.Infinity;
         GameObject nearestenemy = null;
-
 
         foreach(GameObject enemy in enemies)
         {
